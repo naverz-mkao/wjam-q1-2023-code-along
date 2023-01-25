@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 0f96705277e9a1246be4c09053ba2249
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst SoundManager_1 = require(\"./SoundManager\");\r\nclass
+    CollectScript extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n    }\r\n    OnTriggerEnter(other) {\r\n        //comment: logging \"Collect
+    Coin\" to console when another game object with a collider enters the trigger
+    that in on this game object\r\n        UnityEngine_1.Debug.Log(\"Collect Coin\");\r\n       
+    //comment: call PlayCoinCollectSound function\r\n        this.PlayCoinCollectSound();\r\n       
+    //comment: destroy the coin game object that this CollectScript is attached to\r\n       
+    UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n    }\r\n    PlayCoinCollectSound()
+    {\r\n        //comment: Find game object named SoundManager then get the SoundManager
+    component and call the PlayCoinCollectSound function\r\n        UnityEngine_1.GameObject.Find(\"SoundManager\").GetComponent($typeof(SoundManager_1.default)).PlayCoinCollectSound();\r\n   
+    }\r\n}\r\nexports.default = CollectScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29sbGVjdFNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNvbGxlY3RTY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBZ0Y7QUFDaEYsaURBQXFEO0FBQ3JELGlEQUEwQztBQUUxQyxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBRTVELEtBQUs7SUFFTCxDQUFDO0lBRUQsY0FBYyxDQUFDLEtBQWU7UUFDMUIsb0lBQW9JO1FBQ3BJLG1CQUFLLENBQUMsR0FBRyxDQUFDLGNBQWMsQ0FBQyxDQUFDO1FBRTFCLDZDQUE2QztRQUM3QyxJQUFJLENBQUMsb0JBQW9CLEVBQUUsQ0FBQztRQUU1Qiw4RUFBOEU7UUFDOUUsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO0lBQ3hDLENBQUM7SUFFRCxvQkFBb0I7UUFDaEIsNkhBQTZIO1FBQzdILHdCQUFVLENBQUMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxDQUFDLFlBQVksU0FBQyxzQkFBWSxHQUFJLG9CQUFvQixFQUFFLENBQUM7SUFDeEYsQ0FBQztDQUVKO0FBdEJELGdDQXNCQyJ9","assetPath":"Assets/Scripts/CollectScript.ts","manifest":{"properties":[],"name":"CollectScript","description":""},"isCompiled":true}'
+  typescriptHash: 1fb59379988c874a8e80f639f28298ea
+  onlyWriteTrigger: 0
