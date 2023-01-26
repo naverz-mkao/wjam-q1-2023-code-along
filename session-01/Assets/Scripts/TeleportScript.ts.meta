@@ -23,15 +23,19 @@ ScriptedImporter:
     ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass TeleportScript extends
     ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n    }\r\n    OnTriggerEnter(other)
-    {\r\n        //comment: logging name of game object that entered the trigger
-    of the game object this TeleportScript is attached to\r\n        UnityEngine_1.Debug.Log(other.gameObject.name
-    + \" entered trigger\");\r\n        //comment: checking to see if game object
-    that entered the trigger of the game object this TelepoertScript is attached
-    to has a ZepetoCharacter component\r\n        //this would mean that the your
-    character actually tripped the trigger\r\n        if (other.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)))
-    {\r\n            //comment: teleport our character to position 0, 0, 0\r\n           
-    other.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)).Teleport(new
+    {\r\n        //CODE: Use Debug.Log to log the name of game object that entered
+    the trigger of the game object this TeleportScript is attached to\r\n       
+    UnityEngine_1.Debug.Log(other.gameObject.name + \" entered trigger\");\r\n       
+    //TIP:  This if block checks to see if game object that entered the trigger of
+    the game object this TeleportScript is attached to has a ZepetoCharacter component
+    attached to it\r\n        //      Only a ZEPETO character would have a ZepetoCharacter
+    component attached to it, so this would mean a ZEPETO character triggered the
+    trigger\r\n        if (other.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)))
+    {\r\n            //CODE: Get the ZepetoCharacter component through the Collider
+    name other that was pass into OnTriggerEnter\r\n            //      Call the
+    Teleport function that exist in the ZepetoCharacter class, and teleport to position
+    0 for x, 0 for y, and 0 for z\r\n            other.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)).Teleport(new
     UnityEngine_1.Vector3(0, 0, 0), UnityEngine_1.Quaternion.identity);\r\n       
-    }\r\n    }\r\n}\r\nexports.default = TeleportScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnRTY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydFNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRTtBQUNsRSw2RUFBNkQ7QUFDN0QsaURBQXFEO0FBRXJELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFFN0QsS0FBSztJQUVMLENBQUM7SUFFRCxjQUFjLENBQUMsS0FBZTtRQUMxQixxSEFBcUg7UUFDckgsbUJBQUssQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLFVBQVUsQ0FBQyxJQUFJLEdBQUcsa0JBQWtCLENBQUMsQ0FBQztRQUV0RCx5SkFBeUo7UUFDekosc0VBQXNFO1FBQ3RFLElBQUksS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsSUFDakQ7WUFDSSxxREFBcUQ7WUFDckQsS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsR0FBSSxRQUFRLENBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLEVBQUUsd0JBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztTQUN0RztJQUNMLENBQUM7Q0FFSjtBQW5CRCxpQ0FtQkMifQ==","assetPath":"Assets/Scripts/TeleportScript.ts","manifest":{"properties":[],"name":"TeleportScript","description":""},"isCompiled":true}'
-  typescriptHash: 12de2ffcfa98c4c484e7ca9970844d6a
+    }\r\n    }\r\n}\r\nexports.default = TeleportScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnRTY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydFNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRTtBQUNsRSw2RUFBNkQ7QUFDN0QsaURBQXFEO0FBRXJELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFFN0QsS0FBSztJQUVMLENBQUM7SUFFRCxjQUFjLENBQUMsS0FBZTtRQUMxQixtSUFBbUk7UUFDbkksbUJBQUssQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLFVBQVUsQ0FBQyxJQUFJLEdBQUcsa0JBQWtCLENBQUMsQ0FBQztRQUV0RCxnTEFBZ0w7UUFDaEwsa0pBQWtKO1FBQ2xKLElBQUksS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsSUFDakQ7WUFDQSwyR0FBMkc7WUFDM0csa0lBQWtJO1lBQzlILEtBQUssQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDZDQUFlLEdBQUksUUFBUSxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxFQUFFLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7U0FDdEc7SUFDTCxDQUFDO0NBRUo7QUFwQkQsaUNBb0JDIn0=","assetPath":"Assets/Scripts/TeleportScript.ts","manifest":{"properties":[],"name":"TeleportScript","description":""},"isCompiled":true}'
+  typescriptHash: 86371179cf4bd1f33a8460ab055369dc
   onlyWriteTrigger: 0

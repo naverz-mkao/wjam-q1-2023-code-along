@@ -21,7 +21,8 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
     SoundManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n   
-    }\r\n    PlayCoinCollectSound() {\r\n        this.CollectCoin.Play();\r\n   
-    }\r\n}\r\nexports.default = SoundManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU291bmRNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU291bmRNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBRXJELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFFM0QsS0FBSztJQUVMLENBQUM7SUFFTSxvQkFBb0I7UUFDdkIsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUM1QixDQUFDO0NBQ0o7QUFURCwrQkFTQyJ9","assetPath":"Assets/Scripts/SoundManager.ts","manifest":{"properties":[{"assembly":"UnityEngine.AudioModule","name":"CollectCoin","type":"UnityEngine.AudioSource","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SoundManager","description":""},"isCompiled":true}'
-  typescriptHash: be5e6856a68c3c2a4408194dace5baa6
+    }\r\n    PlayCoinCollectSound() {\r\n        //CODE: Call the Play function that
+    exist in the AudioSource class to play your sound\r\n        this.CollectCoinAudio.Play();\r\n   
+    }\r\n}\r\nexports.default = SoundManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU291bmRNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU291bmRNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBRXJELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFLM0QsS0FBSztJQUVMLENBQUM7SUFFTSxvQkFBb0I7UUFDM0IscUZBQXFGO1FBQ2pGLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUNqQyxDQUFDO0NBQ0o7QUFiRCwrQkFhQyJ9","assetPath":"Assets/Scripts/SoundManager.ts","manifest":{"properties":[{"assembly":"UnityEngine.AudioModule","name":"CollectCoinAudio","type":"UnityEngine.AudioSource","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SoundManager","description":""},"isCompiled":true}'
+  typescriptHash: 3caeaa13e2c078fcc10c3fc6b65fee07
   onlyWriteTrigger: 0

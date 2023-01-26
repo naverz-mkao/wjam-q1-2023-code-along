@@ -9,18 +9,20 @@ export default class CollectScript extends ZepetoScriptBehaviour {
     }
 
     OnTriggerEnter(other: Collider) {
-        //comment: logging "Collect Coin" to console when another game object with a collider enters the trigger that in on this game object
+        //CODE: Use Debug.Log to log "Collect Coin" to the console when another game object with a collider enters the trigger that is on this game object
         Debug.Log("Collect Coin");
         
-        //comment: call PlayCoinCollectSound function
-        this.PlayCoinCollectSound();
+        //CODE: Call the PlayCoinCollectSoundInSoundManager function that's in this CollectScript class
+        this.PlayCoinCollectSoundInSoundManager();
 
-        //comment: destroy the coin game object that this CollectScript is attached to
+        //CODE: Call the Destroy function inside the GameObject class to destroy the coin game object that this CollectScript is attached to
         GameObject.Destroy(this.gameObject);
     }
 
-    PlayCoinCollectSound() {
-        //comment: Find game object named SoundManager then get the SoundManager component and call the PlayCoinCollectSound function
+    PlayCoinCollectSoundInSoundManager() {
+        //CODE: Find game object named SoundManager using GameObject.Find,
+        //      then get the SoundManager component that is on the SoundManager game object,
+        //      and lastly call the PlayCoinCollectSound function that exist in the SoundManager class
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayCoinCollectSound();
     }
 

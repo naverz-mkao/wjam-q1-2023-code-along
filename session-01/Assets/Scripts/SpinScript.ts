@@ -1,9 +1,10 @@
-import { Quaternion, Random, Time, Vector3 } from 'UnityEngine'
+import { Quaternion, Random, Space, Time, Vector3 } from 'UnityEngine'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 
 export default class SpinScript extends ZepetoScriptBehaviour {
 
-    //comment: declare public variables whose values can be set in the inspector
+    //CODE: Declare 3 public variables named xSpeed, ySpeed, and zSpeed or type number whose values can be set in the inspector
+    //      In the Inspector, set the values for xSpeed, ySpeed, and zSpeed to some values
     public xSpeed:number;
     public ySpeed:number;
     public zSpeed:number;
@@ -13,7 +14,10 @@ export default class SpinScript extends ZepetoScriptBehaviour {
     }
 
     Update() {
-        //comment: rotate game object using the values set in the inspector for xSpeed, ySpeed, and zSpeed
-        this.transform.Rotate(new Vector3(this.xSpeed, this.ySpeed, this.zSpeed) * Time.deltaTime);
+    //Code: Access the Transform component that exist on the game object that this SpinScript is attached to
+    //      Call the Rotate function that exist in the Transform class to rotate the game object
+    //      Note that the Rotate function takes a Vector3 as its first parameter
+    //      Pass in xSpeed, ySpeed, zSpeed variables to create your Vector3
+        this.transform.Rotate(new Vector3(this.xSpeed, this.ySpeed, this.zSpeed) * Time.deltaTime, Space.Self);
     }
 }
