@@ -10,7 +10,6 @@ export default class TeleportScript extends ZepetoScriptBehaviour {
 
     OnTriggerEnter(other: Collider) {
         //CODE: Use Debug.Log to log the name of game object that entered the trigger of the game object this TeleportScript is attached to
-        Debug.Log(other.gameObject.name + " entered trigger");
 
         //TIP:  This if block checks to see if game object that entered the trigger of the game object this TeleportScript is attached to has a ZepetoCharacter component attached to it
         //      Only a ZEPETO character would have a ZepetoCharacter component attached to it, so this would mean a ZEPETO character triggered the trigger
@@ -18,8 +17,84 @@ export default class TeleportScript extends ZepetoScriptBehaviour {
         {
         //CODE: Get the ZepetoCharacter component through the Collider name other that was pass into OnTriggerEnter
         //      Call the Teleport function that exist in the ZepetoCharacter class, and teleport to position 0 for x, 0 for y, and 0 for z
-            other.gameObject.GetComponent<ZepetoCharacter>().Teleport(new Vector3(0,0,0), Quaternion.identity);
         }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//====================ANSWERS====================
+//Debug.Log(other.gameObject.name + " entered trigger");
+//other.gameObject.GetComponent<ZepetoCharacter>().Teleport(new Vector3(0,0,0), Quaternion.identity);

@@ -19,16 +19,19 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass SpinScript extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    Start() {\r\n    }\r\n    Update() {\r\n        //Code: Access the Transform
-    component that exist on the game object that this SpinScript is attached to\r\n       
-    //      Call the Rotate function that exist in the Transform class to rotate
-    the game object\r\n        //      Note that the Rotate function takes a Vector3
-    as its first parameter\r\n        //      Pass in xSpeed, ySpeed, zSpeed variables
-    to create your Vector3\r\n        this.transform.Rotate(UnityEngine_1.Vector3.op_Multiply(new
-    UnityEngine_1.Vector3(this.xSpeed, this.ySpeed, this.zSpeed), UnityEngine_1.Time.deltaTime),
-    UnityEngine_1.Space.Self);\r\n    }\r\n}\r\nexports.default = SpinScript;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BpblNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwaW5TY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBc0U7QUFDdEUsaURBQXFEO0FBRXJELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFRekQsS0FBSztJQUVMLENBQUM7SUFFRCxNQUFNO1FBQ04sd0dBQXdHO1FBQ3hHLDRGQUE0RjtRQUM1Riw0RUFBNEU7UUFDNUUsdUVBQXVFO1FBQ25FLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQXBCYSxxQkFBTyxDQXNCcytwQixXQUFZLENBRnJncUIsSUFBSSxxQkFBTyxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsSUFBSSxDQUFDLE1BQU0sRUFBRSxJQUFJLENBQUMsTUFBTSxDQUFDLEVBQUcsa0JBQUksQ0FBQyxTQUFTLEdBQUUsbUJBQUssQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUMzRyxDQUFDO0NBQ0o7QUFuQkQsNkJBbUJDIn0=","assetPath":"Assets/Scripts/SpinScript.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"xSpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"ySpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"zSpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpinScript","description":""},"isCompiled":true}'
-  typescriptHash: 5b6aa46fffdc711116bb2e9b765121b8
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    SpinScript extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    //CODE: Declare
+    3 public variables named xSpeed, ySpeed, and zSpeed or type number whose values
+    can be set in the inspector\r\n    //      In the Inspector, set the values for
+    xSpeed, ySpeed, and zSpeed to some values\r\n    Start() {\r\n    }\r\n    Update()
+    {\r\n        //Code: Access the Transform component that exist on the game object
+    that this SpinScript is attached to\r\n        //      Call the Rotate function
+    that exist in the Transform class to rotate the game object\r\n        //     
+    Note that the Rotate function takes a Vector3 as its first parameter\r\n       
+    //      Pass in xSpeed, ySpeed, zSpeed variables to create your Vector3\r\n   
+    }\r\n}\r\nexports.default = SpinScript;\r\n//====================ANSWERS====================\r\n//public
+    xSpeed:number;\r\n//public ySpeed:number;\r\n//public zSpeed:number;\r\n//this.transform.Rotate(new
+    Vector3(this.xSpeed, this.ySpeed, this.zSpeed) * Time.deltaTime, Space.Self);\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BpblNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwaW5TY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQUV6RCwySEFBMkg7SUFDM0gsc0ZBQXNGO0lBRXRGLEtBQUs7SUFFTCxDQUFDO0lBRUQsTUFBTTtRQUNOLHdHQUF3RztRQUN4Ryw0RkFBNEY7UUFDNUYsNEVBQTRFO1FBQzVFLHVFQUF1RTtJQUN2RSxDQUFDO0NBQ0o7QUFmRCw2QkFlQztBQTZFRCxpREFBaUQ7QUFDakQsdUJBQXVCO0FBQ3ZCLHVCQUF1QjtBQUN2Qix1QkFBdUI7QUFDdkIseUdBQXlHIn0=","assetPath":"Assets/Scripts/SpinScript.ts","manifest":{"properties":[],"name":"SpinScript","description":""},"isCompiled":true}'
+  typescriptHash: 3eae9657a68b41d2b1d0b6ae3dd903eb
   onlyWriteTrigger: 0

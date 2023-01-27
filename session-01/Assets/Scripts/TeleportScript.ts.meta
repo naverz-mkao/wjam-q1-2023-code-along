@@ -19,13 +19,11 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass TeleportScript extends
     ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n    }\r\n    OnTriggerEnter(other)
     {\r\n        //CODE: Use Debug.Log to log the name of game object that entered
     the trigger of the game object this TeleportScript is attached to\r\n       
-    UnityEngine_1.Debug.Log(other.gameObject.name + \" entered trigger\");\r\n       
     //TIP:  This if block checks to see if game object that entered the trigger of
     the game object this TeleportScript is attached to has a ZepetoCharacter component
     attached to it\r\n        //      Only a ZEPETO character would have a ZepetoCharacter
@@ -34,8 +32,9 @@ ScriptedImporter:
     {\r\n            //CODE: Get the ZepetoCharacter component through the Collider
     name other that was pass into OnTriggerEnter\r\n            //      Call the
     Teleport function that exist in the ZepetoCharacter class, and teleport to position
-    0 for x, 0 for y, and 0 for z\r\n            other.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)).Teleport(new
-    UnityEngine_1.Vector3(0, 0, 0), UnityEngine_1.Quaternion.identity);\r\n       
-    }\r\n    }\r\n}\r\nexports.default = TeleportScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnRTY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydFNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRTtBQUNsRSw2RUFBNkQ7QUFDN0QsaURBQXFEO0FBRXJELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFFN0QsS0FBSztJQUVMLENBQUM7SUFFRCxjQUFjLENBQUMsS0FBZTtRQUMxQixtSUFBbUk7UUFDbkksbUJBQUssQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLFVBQVUsQ0FBQyxJQUFJLEdBQUcsa0JBQWtCLENBQUMsQ0FBQztRQUV0RCxnTEFBZ0w7UUFDaEwsa0pBQWtKO1FBQ2xKLElBQUksS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsSUFDakQ7WUFDQSwyR0FBMkc7WUFDM0csa0lBQWtJO1lBQzlILEtBQUssQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDZDQUFlLEdBQUksUUFBUSxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxFQUFFLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7U0FDdEc7SUFDTCxDQUFDO0NBRUo7QUFwQkQsaUNBb0JDIn0=","assetPath":"Assets/Scripts/TeleportScript.ts","manifest":{"properties":[],"name":"TeleportScript","description":""},"isCompiled":true}'
-  typescriptHash: 86371179cf4bd1f33a8460ab055369dc
+    0 for x, 0 for y, and 0 for z\r\n        }\r\n    }\r\n}\r\nexports.default =
+    TeleportScript;\r\n//====================ANSWERS====================\r\n//Debug.Log(other.gameObject.name
+    + \" entered trigger\");\r\n//other.gameObject.GetComponent<ZepetoCharacter>().Teleport(new
+    Vector3(0,0,0), Quaternion.identity);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnRTY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydFNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLDZFQUE2RDtBQUM3RCxpREFBcUQ7QUFFckQsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQUU3RCxLQUFLO0lBRUwsQ0FBQztJQUVELGNBQWMsQ0FBQyxLQUFlO1FBQzFCLG1JQUFtSTtRQUVuSSxnTEFBZ0w7UUFDaEwsa0pBQWtKO1FBQ2xKLElBQUksS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsSUFDakQ7WUFDQSwyR0FBMkc7WUFDM0csa0lBQWtJO1NBQ2pJO0lBQ0wsQ0FBQztDQUVKO0FBbEJELGlDQWtCQztBQTJFRCxpREFBaUQ7QUFDakQsd0RBQXdEO0FBQ3hELHFHQUFxRyJ9","assetPath":"Assets/Scripts/TeleportScript.ts","manifest":{"properties":[],"name":"TeleportScript","description":""},"isCompiled":true}'
+  typescriptHash: ee38d9534d8621a3c578d572208c5e60
   onlyWriteTrigger: 0
