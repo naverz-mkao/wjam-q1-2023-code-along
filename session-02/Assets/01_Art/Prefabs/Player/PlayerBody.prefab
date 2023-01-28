@@ -4896,7 +4896,6 @@ GameObject:
   - component: {fileID: 1240353420524336335}
   - component: {fileID: 8880588629512106818}
   - component: {fileID: 510192804729860294}
-  - component: {fileID: 8526118397216299424}
   - component: {fileID: 1463368136023163547}
   m_Layer: 0
   m_Name: PlayerBody
@@ -9693,29 +9692,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &8526118397216299424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6758917914520519265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script:
-    keys:
-    - info
-    unityValues:
-    - {fileID: 11400000, guid: 2552be0946f73434ca0d223f941a5c7e, type: 2}
-    values:
-    - 
-    unityArrayValues: []
-    arrayValues: []
-    script: {fileID: 4458252877524076426, guid: 424ed880e5dde484783a471a17d3a979, type: 3}
-    isExpaned: 0
 --- !u!135 &1463368136023163547
 SphereCollider:
   m_ObjectHideFlags: 0

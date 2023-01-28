@@ -17,25 +17,13 @@ export enum MultiplayMessageType {
     
     //Let Server Know Client is fully loaded
     ClientReady = "ClientReady",
-    
-    // Set Team
-    UpdateTeam = "SetTeam",
-    
-    //Call Meeting,
-    CallMeeting = "CallMeeting",
-    //Meeting Finished
-    MeetingFinished = "MeetingFinished",
 
     //Game States
     Waiting = "Waiting",
 
     GameReady = "GameReady",
 
-    GameStart = "GameStart",
-
-    GameFinish = "GameFinish",
-
-    Result = "Result"
+    GameStart = "GameStart"
 }
 
 //Transform position data
@@ -52,19 +40,11 @@ export type MultiplayMessageCharacterState = {
     characterState: number
 }
 
-type MultiplayMessageCharacterTeam = {
-
-    //state id number for translation to enum. 
-    userId: string,
-    teamId: number
-};
-
 type MultiplayMessageWaiting = {
     minClients: number
 }
 
 type MultiplayMessageGameReady = {
-    virusId: string
 }
 
 
@@ -72,24 +52,9 @@ type MultiplayMessageGameStart = {
 
 }
 
-
-type MultiplayMessageGameFinish = {
-
-}
-
-
-type MultiplayMessageResult = {
-
-}
-
 type MultiplayMessageClientReady = {
 
 }
-
-type MultiplayMessageCallMeeting = {
-
-}
-
 
 
 enum GameState {
@@ -101,18 +66,11 @@ enum GameState {
     GameReady,
     
     //All Players loaded. Game is in progress
-    GameStart,
-    
-    //Winner has been decided. Game is over
-    GameFinish,
-
-    //Game has finished and the results are shown. 
-    Result
+    GameStart
 }
 
 export default class ClientScript extends ZepetoScriptBehaviour {
     private static instance: ClientScript;
-    public static isInitializing: boolean = true;
     static GetInstance(): ClientScript {
         if (!ClientScript.instance) {
             const targetObj = GameObject.Find("Client");
@@ -138,7 +96,6 @@ export default class ClientScript extends ZepetoScriptBehaviour {
     public Awake() {
         this.messageSender = new ClientMessageSender();
         this.messageSender.Init(this);
-        ClientScript.isInitializing = true;
         this.gameState = GameState.Wait;
     }
     
@@ -156,45 +113,24 @@ export default class ClientScript extends ZepetoScriptBehaviour {
 
             this.InitializeMessages();
         }
-
-        GameObject.DontDestroyOnLoad(this.gameObject);
     }
     
     public InitializeMessages()
     {
         this.multiplayRoom.AddMessageHandler(MultiplayMessageType.Waiting, (message: MultiplayMessageWaiting) => {
-            console.log("Waiting..");
             this.minClients = message.minClients;
             this.gameState = GameState.Wait;
             Main.instance.uiMgr.UpdateUIConsole(`Waiting For ${this.multiplayPlayers.size}/${this.minClients} Clients to connect`);
         });
 
         this.multiplayRoom.AddMessageHandler(MultiplayMessageType.GameReady, (message: MultiplayMessageGameReady) => {
-            console.log(`Initialized Game with virus ${message.virusId}`);
-            Main.instance.uiMgr.UpdateUIConsole("Game is Ready. Assigning the Virus");
+            Main.instance.uiMgr.UpdateUIConsole("Game is Ready!");
             console.error("Recieved Game Ready Message");
-            Main.instance.InitializeWithVirus(message.virusId);
             this.gameState = GameState.GameReady;
         });
 
         this.multiplayRoom.AddMessageHandler(MultiplayMessageType.GameStart, (message => {
             this.gameState = GameState.GameStart;
-        }));
-
-        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.GameFinish, (message => {
-            this.gameState = GameState.GameFinish;
-        }));
-
-        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.Result, (message => {
-            this.gameState = GameState.Result;
-        }));
-
-        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.CallMeeting, (message => {
-            Main.instance.uiMgr.ShowVotingWin();
-        }));
-
-        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.MeetingFinished, (message => {
-            Main.instance.uiMgr.HideVotingWin();
         }));
     }
 
@@ -222,7 +158,6 @@ export default class ClientScript extends ZepetoScriptBehaviour {
             // Register Player Add/Remove events 
             state.players.add_OnAdd((player, userId) => { this.OnPlayerAdd(player, userId) });
             state.players.add_OnRemove((player, userId) => { this.OnPlayerRemove(player, userId) });
-            state.gameTimer.add_OnChange(() => { Main.instance.uiMgr.UpdateMeetingTimer(state.gameTimer.value)});
 
             this.InitializeCharacter(state);
         }
@@ -244,16 +179,11 @@ export default class ClientScript extends ZepetoScriptBehaviour {
         // If the added player id matches the world service id, we know this is the local player. 
         const isLocal = WorldService.userId === userId;
         
-        if (isLocal)
-        {
-            ClientScript.isInitializing = false;
-        }
-        
         if (this.gameState == GameState.Wait)
         {
             Main.instance.uiMgr.UpdateUIConsole(`Waiting For ${this.multiplayPlayers.size}/${this.minClients} Clients to connect`);
         }
-        console.error("Added Player " + userId);
+        
         // Instantiate character with the above settings. 
         ZepetoPlayers.instance.CreatePlayerWithUserId(userId, userId, spawnInfo, isLocal);
         //ZepetoPlayers.instance.GetPlayer(userId.toString());
@@ -263,7 +193,7 @@ export default class ClientScript extends ZepetoScriptBehaviour {
     private OnPlayerRemove(player: Player, userId: string) {
         if (!this.multiplayPlayers.has(userId)) return;
         ZepetoPlayers.instance.RemovePlayer(userId);
-        Main.instance.RemoveSpawn(userId);
+        Main.instance.gameMgr.RemoveSpawn(userId);
         this.multiplayPlayers.delete(userId);
 
         if (this.gameState == GameState.Wait)
@@ -329,13 +259,6 @@ export default class ClientScript extends ZepetoScriptBehaviour {
                         zepetoPlayer.character.Jump();
                 }
             }
-            
-            player.team.OnChange += () => {
-                // Only sync for everyone but the local player
-                //if (zepetoPlayer.isLocalPlayer == false) {
-                    Main.instance.gameMgr.UpdateTeam(player.userId, player.team.teamId);
-                //}
-            }
         });
     }
 
@@ -397,23 +320,5 @@ export default class ClientScript extends ZepetoScriptBehaviour {
         let message : MultiplayMessageClientReady = {}
 
         this.multiplayRoom.Send(MultiplayMessageType.ClientReady, message);
-    }
-
-    public SendMessageCallMeeting()
-    {
-        const clientCount = this.multiplayPlayers.size;
-        let message : MultiplayMessageCallMeeting = {}
-
-        this.multiplayRoom.Send(MultiplayMessageType.CallMeeting, message);
-    }
-    
-    public SendMessageUpdateTeam(userId: string, teamId: number)
-    {
-        let message : MultiplayMessageCharacterTeam = {
-            userId : userId,
-            teamId : teamId
-        }
-
-        this.multiplayRoom.Send(MultiplayMessageType.UpdateTeam, message);
     }
 }
