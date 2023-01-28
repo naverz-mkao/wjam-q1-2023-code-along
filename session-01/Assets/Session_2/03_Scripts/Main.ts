@@ -1,0 +1,88 @@
+import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
+import { GameObject, Transform } from 'UnityEngine';
+import CharacterController from './Character/CharacterController';
+import GameManager from './Game Management/GameManager';
+import UIManager from './UI/UIManager';
+import {ZepetoPlayer, ZepetoPlayers } from 'ZEPETO.Character.Controller';
+import Client from './Game Management/Multiplay/Client';
+
+export default class Main extends ZepetoScriptBehaviour {
+    public static instance: Main;
+
+    public characterController: CharacterController;
+    public gameMgr: GameManager;
+    public uiMgr: UIManager;
+    public client: Client;
+    
+    public hasEnteredLobby : boolean = false;
+
+    private spawnedIds: string[];
+
+    public static GetInstance(): Main
+    {
+        let gameObject = GameObject.Find("Main");
+        if (gameObject != null)
+            return gameObject.GetComponent<Main>();
+        else
+            return new Main();
+    }
+
+    public Awake()
+    {
+        Main.instance = this;
+        this.gameMgr = this.GetComponentInChildren<GameManager>();
+        this.uiMgr = this.GetComponentInChildren<UIManager>();
+        this.client = this.GetComponentInChildren<Client>();
+    }
+
+    public Start()
+    {
+        this.spawnedIds = new Array<string>();
+        this.InitializeAll();
+    }
+
+    public InitializeAll()  
+    {
+        this.gameMgr?.Init();
+        this.uiMgr?.Init();
+        this.InitializePlayers();
+    }
+
+    public InitializePlayers()
+    {
+        ZepetoPlayers.instance.OnAddedPlayer.AddListener((userId) => {
+            this.AddSpawn(userId);
+        });
+    }
+
+    public AddSpawn(userId: string)
+    {
+        if (this.spawnedIds.includes(userId)) { return; }
+        console.log("Initializing ID " + userId);
+        this.spawnedIds.push(userId);
+        if (this.gameMgr)
+            this.gameMgr.AddSpawn(userId);
+    }
+
+    public RemoveSpawn(userId: string)
+    {
+        if (!this.spawnedIds.includes(userId)) { return; }
+
+        let index = this.spawnedIds.indexOf(userId);
+        this.spawnedIds.splice(index, 1);
+        if (this.gameMgr)
+            this.gameMgr.RemoveSpawn();
+    }
+
+    public GetSpawnTransform(spawnIndex: number): Transform
+    {
+        return this.gameMgr?.GetSpawnTransform(spawnIndex);
+    }
+    
+    public InitializeWithVirus(virusId: string)
+    {
+        if (this.gameMgr == undefined) { return; }
+        console.log(`Setting Virus with id ${virusId}`);
+        this.StartCoroutine(this.gameMgr.InitializeWithVirus(virusId));
+    }
+}
