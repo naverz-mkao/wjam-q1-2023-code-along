@@ -7,7 +7,6 @@ export default class SpinScript extends ZepetoScriptBehaviour {
     //      In the Inspector, set the values for xSpeed, ySpeed, and zSpeed to some values
 
     Start() {    
-
     }
 
     Update() {

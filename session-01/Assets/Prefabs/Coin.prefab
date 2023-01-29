@@ -122,10 +122,10 @@ MonoBehaviour:
     values:
     - '{"type":"System.Single, mscorlib","value":"0"}'
     - '{"type":"System.Single, mscorlib","value":"0"}'
-    - '{"type":"System.Single, mscorlib","value":"200"}'
+    - '{"type":"System.Single, mscorlib","value":"90"}'
     unityArrayValues: []
     arrayValues: []
-    script: {fileID: 4458252877524076426, guid: 95615a4786474b740ae15b2fe9719e52, type: 3}
+    script: {fileID: 4458252877524076426, guid: dd636de6d93a2e6488ec56485cde3949, type: 3}
     isExpaned: 0
 --- !u!114 &1221138225918946916
 MonoBehaviour:
@@ -145,5 +145,5 @@ MonoBehaviour:
     values: []
     unityArrayValues: []
     arrayValues: []
-    script: {fileID: 4458252877524076426, guid: 0f96705277e9a1246be4c09053ba2249, type: 3}
+    script: {fileID: 4458252877524076426, guid: 31164885f057b924b93a1f1b16c287c7, type: 3}
     isExpaned: 0

@@ -32,6 +32,6 @@ ScriptedImporter:
     }\r\n}\r\nexports.default = SpinScript;\r\n//====================ANSWERS====================\r\n//public
     xSpeed:number;\r\n//public ySpeed:number;\r\n//public zSpeed:number;\r\n//this.transform.Rotate(new
     Vector3(this.xSpeed, this.ySpeed, this.zSpeed) * Time.deltaTime, Space.Self);\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BpblNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwaW5TY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQUV6RCwySEFBMkg7SUFDM0gsc0ZBQXNGO0lBRXRGLEtBQUs7SUFFTCxDQUFDO0lBRUQsTUFBTTtRQUNOLHdHQUF3RztRQUN4Ryw0RkFBNEY7UUFDNUYsNEVBQTRFO1FBQzVFLHVFQUF1RTtJQUN2RSxDQUFDO0NBQ0o7QUFmRCw2QkFlQztBQTZFRCxpREFBaUQ7QUFDakQsdUJBQXVCO0FBQ3ZCLHVCQUF1QjtBQUN2Qix1QkFBdUI7QUFDdkIseUdBQXlHIn0=","assetPath":"Assets/Scripts/SpinScript.ts","manifest":{"properties":[],"name":"SpinScript","description":""},"isCompiled":true}'
-  typescriptHash: 3eae9657a68b41d2b1d0b6ae3dd903eb
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BpblNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwaW5TY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQUV6RCwySEFBMkg7SUFDM0gsc0ZBQXNGO0lBRXRGLEtBQUs7SUFDTCxDQUFDO0lBRUQsTUFBTTtRQUNOLHdHQUF3RztRQUN4Ryw0RkFBNEY7UUFDNUYsNEVBQTRFO1FBQzVFLHVFQUF1RTtJQUN2RSxDQUFDO0NBQ0o7QUFkRCw2QkFjQztBQTZFRCxpREFBaUQ7QUFDakQsdUJBQXVCO0FBQ3ZCLHVCQUF1QjtBQUN2Qix1QkFBdUI7QUFDdkIseUdBQXlHIn0=","assetPath":"Assets/Scripts/SpinScript.ts","manifest":{"properties":[],"name":"SpinScript","description":""},"isCompiled":true}'
+  typescriptHash: a9b6ae5150647e6a04242d234e26a6e8
   onlyWriteTrigger: 0
