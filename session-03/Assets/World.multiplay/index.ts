@@ -13,10 +13,10 @@ enum MultiplayMessageType {
     
     // Set Team
     UpdateTeam = "SetTeam",
-    //Call Meeting
-    CallMeeting = "CallMeeting",
-    //Meeting Finished
-    MeetingFinished = "MeetingFinished",
+    
+    // Room Lock/Unlock States
+    LockRoom = "LockRoom",
+    UnlockRoom = "UnlockRoom",
 
     //Game States
     Waiting = "Waiting",
@@ -27,7 +27,7 @@ enum MultiplayMessageType {
 
     GameFinish = "GameFinish",
 
-    Result = "Result",
+    Result = "Result"
 };
 
 //Transform position data
@@ -71,7 +71,7 @@ type MultiplayMessageGameFinish = {
 
 
 type MultiplayMessageResult = {
-
+    winningTeam : number
 }
 
 type MultiplayMessageClientReady = {
@@ -79,10 +79,6 @@ type MultiplayMessageClientReady = {
 }
 
 type MultiplayMessageCallMeeting = {
-
-}
-
-type MultiplayMessageMeetingFinished = {
 
 }
 
@@ -99,8 +95,6 @@ enum GameState {
 
     //Winner has been decided. Game is over
     GameFinish,
-    
-    MeetingTimer,
 
     //Game has finished and the results are shown. 
     Result
@@ -161,24 +155,40 @@ export default class extends Sandbox {
         });
         
         this.onMessage<MultiplayMessageCharacterTeam>(MultiplayMessageType.UpdateTeam, (client, message: MultiplayMessageCharacterTeam) => {
-            // let info : MultiplayMessageCharacterTeam = {
-            //     userId: client.userId,
-            //     teamId: message.teamId
-            // }
-
             const player = this.state.players.get(message.userId);
             player.team.teamId = message.teamId;
             
             console.log(`Updated team for user ${message.userId} to ${message.userId}`);
             
-            //Send Change team message to all client except original sender.
-            this.broadcast(MultiplayMessageType.UpdateTeam, info, {except : client});
+            if (this.GetWinner() == 0)
+            {
+                this.state.gameTimer.value = 0;
+            }
+            
         });
 
-        this.onMessage<MultiplayMessageCallMeeting>(MultiplayMessageType.CallMeeting, (client, message: MultiplayMessageCallMeeting) => {
-            console.log("Calling Town Meeting");
-            this.SetGameState(GameState.MeetingTimer);
+        this.onMessage<MultiplayMessageCallMeeting>(MultiplayMessageType.LockRoom, (client, message: MultiplayMessageCallMeeting) => {
+            this.lock();
         });
+
+        this.onMessage<MultiplayMessageCallMeeting>(MultiplayMessageType.UnlockRoom, (client, message: MultiplayMessageCallMeeting) => {
+            this.unlock();
+        });
+    }
+    
+    GetWinner(): number
+    {
+        let virusCount : number = 0;
+        let survivorCount : number = 0;
+        
+        this.state.players.forEach((value: Player, key: string) =>{
+            if (value.team.teamId == 0)
+                virusCount++;
+            else if (value.team.teamId == 1)
+                survivorCount++;
+        });
+        
+        return virusCount > survivorCount ? 0 : 1;
     }
 
     //Get the next available spawn transform index.
@@ -216,7 +226,6 @@ export default class extends Sandbox {
         //Cache our player to the map. 
         this.state.players.set(userId, player);
         console.log(`Began Waiting.. ${this.state.players.size}/${this.gameStartCount}`);
-        
     }
 
     onLeave(client: SandboxPlayer, consented?: boolean) {
@@ -225,14 +234,12 @@ export default class extends Sandbox {
         
         // Delete the player data
         this.state.players.delete(client.userId);
-        
-        //TODO: Check if the player that left is a virus. If yes, trigger survivor victory.
     }
 
     onTick(deltaTime: number): void {
         this.UpdateWait(deltaTime);
         this.UpdateResult(deltaTime);
-        this.UpdateMeetingTimer(deltaTime);
+        this.UpdateGameTimer(deltaTime);
     }
 
     InitializeWait()
@@ -246,16 +253,9 @@ export default class extends Sandbox {
     InitializeGame()
     {
         this.gameTime = 0;
-        
+        this.state.gameTimer.value = 0;
         //Send a message to the clients that the game is beginning. 
         this.SendMessageGameStart();
-    }
-    
-    InitializeMeetingTimer()
-    {
-        this.state.gameTimer.value = 0;
-        
-        this.SendMessageMeetingTimer();
     }
 
     InitializeResult()
@@ -267,10 +267,7 @@ export default class extends Sandbox {
     UpdateWait(deltaTime: number) {
         // Don't perform any actions if the game state isn't wait. 
         if (this.gameState != GameState.Wait) return;
-
-        // cache the current player count. 
-        //this.currentPlayerCount = this.state.players.size;
-
+        
         // Check if there are enough players to start the game. 
         if (this.currentPlayerCount >= this.gameStartCount) {
             // If the game hasn't yet started, send the gameready state to the clients. 
@@ -283,9 +280,9 @@ export default class extends Sandbox {
         }
     }
 
-    UpdateMeetingTimer(deltaTime: number) {
+    UpdateGameTimer(deltaTime: number) {
         // Don't execute code if the current state is not game. 
-        if (this.gameState != GameState.MeetingTimer) return;
+        if (this.gameState != GameState.GameStart) return;
 
         // Count the gametime by the deltaTime. 
         this.gameTime += deltaTime;
@@ -300,10 +297,10 @@ export default class extends Sandbox {
         this.state.gameTimer.value = Math.floor(((this.timerDuration + 1000) - this.gameTime) * 0.001);
 
         // Check if the timer reached 0. 
-        if (this.state.gameTimer.value == 0) this.SendMessageMeetingFinished();
+        if (this.state.gameTimer.value == 0) this.SendMessageGameFinish();
 
         //After sending the finish message, wait 3 seconds, and show the result. 
-        if (this.gameTime >= this.timerDuration + (3 * 1000)) this.SetGameState(GameState.GameStart);
+        if (this.gameTime >= this.timerDuration + (3 * 1000)) this.SetGameState(GameState.Result);
     }
 
     UpdateResult(deltaTime: number) {
@@ -321,7 +318,6 @@ export default class extends Sandbox {
         switch (gameState) {
             case GameState.Wait: this.InitializeWait(); break;
             case GameState.GameStart: this.InitializeGame(); break;
-            case GameState.MeetingTimer: this.InitializeMeetingTimer(); break;
             case GameState.Result: this.InitializeResult(); break;
         }
     }
@@ -358,12 +354,6 @@ export default class extends Sandbox {
         this.broadcast(MultiplayMessageType.GameStart, message);
     }
 
-    SendMessageMeetingTimer() {
-        const message: MultiplayMessageCallMeeting = {};
-        console.log("Game Start..");
-        this.broadcast(MultiplayMessageType.CallMeeting, message);
-    }
-
     SendMessageGameFinish() {
         const message: MultiplayMessageGameFinish = {};
         console.log("Game Finish..");
@@ -371,12 +361,10 @@ export default class extends Sandbox {
     }
 
     SendMessageResult() {
-        const message: MultiplayMessageResult = {};
+        const message: MultiplayMessageResult = 
+        {
+            winningTeam: this.GetWinner()
+        };
         this.broadcast(MultiplayMessageType.Result, message);
-    }
-
-    SendMessageMeetingFinished() {
-        const message: MultiplayMessageMeetingFinished = {};
-        this.broadcast(MultiplayMessageType.MeetingFinished, message);
     }
 }

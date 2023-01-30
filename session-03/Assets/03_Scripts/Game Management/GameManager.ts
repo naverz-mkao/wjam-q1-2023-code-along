@@ -82,13 +82,9 @@ export default class GameManager extends ZepetoScriptBehaviour {
             if (cc.playerInfo.userId == virusId)
                 cc.SetTeam(PlayerTeam.VIRUS);
             else
-                cc.SetTeam(cc.IsReady() ? PlayerTeam.SURVIVOR : PlayerTeam.GHOST);
+                cc.SetTeam(PlayerTeam.SURVIVOR);
         });
         
-        
-        
-        //LoadPlayer Profiles
-        Main.instance.uiMgr.uiVotingWinController.LoadProfiles(Array.from(this.players.values()));
     }
     
     public UpdateTeam(userId: string, teamId: number)
@@ -111,18 +107,6 @@ export default class GameManager extends ZepetoScriptBehaviour {
         
         let body: GameObject = GameObject.Instantiate<GameObject>(this.bodyPrefab, cc.transform.position, Quaternion.identity);
         body.gameObject.name = cc.playerInfo.userId;
-    }
-    
-    public ReportBody(userId: string)
-    {
-        let body = this.bodies.get(userId);
-        if (body != null)
-        {
-            GameObject.Destroy(body);
-        }
-        
-        //Show Hall Meeting UI
-        Main.instance.uiMgr.ShowVotingWin();
     }
     
     //Despawn character without removing user from the world server.

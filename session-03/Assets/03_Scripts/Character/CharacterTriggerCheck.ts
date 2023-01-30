@@ -8,8 +8,8 @@ export default class CharacterTriggerCheck extends ZepetoScriptBehaviour {
     
     public myCC : CharacterController;
     
-    
     private myCol : Collider;
+    
     public Start()
     {
         this.myCC = Main.instance.characterController;
@@ -18,32 +18,15 @@ export default class CharacterTriggerCheck extends ZepetoScriptBehaviour {
     
     public OnTriggerEnter(other: Collider)
     {
-        if (other.gameObject.tag == "Interactible")
-        {
-            let info = other.gameObject.GetComponent<InteractibleObject>();
-            this.myCC.EnableInteraction(true, info);
-        }
-        
         if (other.gameObject.tag == "Survivor" && this.myCC.IsVirus())
         {
             this.myCC.AddTarget(other.gameObject.name);
-        }
-        
-        if (other.gameObject.tag == "Virus")
-        {
-            
         }
     }
     
     public OnTriggerExit(other: Collider)
     {
-        if (other.CompareTag("Interactible"))
-        {
-            let info = other.gameObject.GetComponent<InteractibleObject>();
-            Main.instance.characterController.EnableInteraction(false, info);
-        }
-
-        if (other.CompareTag("Survivor") && this.myCC.IsVirus())
+        if (other.gameObject.tag == "Survivor" && this.myCC.IsVirus())
         {
             this.myCC.RemoveTarget(other.gameObject.name);
         }

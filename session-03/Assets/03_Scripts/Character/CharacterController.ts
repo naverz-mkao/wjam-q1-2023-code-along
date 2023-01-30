@@ -91,14 +91,6 @@ export default class CharacterController extends ZepetoScriptBehaviour {
         return (this.playerInfo.userId == WorldService.userId);
     }
     
-    public IsReady(): boolean
-    {
-        //TODO: Set up ready depending on server value
-        //return Main.instance.client.GetPlayer(this.playerInfo.userId).isReady;
-        
-        return true;
-    }
-    
     public AddTarget(userId: string)
     {
         if (this.targetPlayers.has(userId)) {return;}
@@ -196,69 +188,9 @@ export default class CharacterController extends ZepetoScriptBehaviour {
         }
     }
     
-    public EnableInteraction(b: boolean, interactObject: InteractibleObject)
-    {
-        this.currentEvent = interactObject.GetEvent();
-        if (this.currentEvent == InteractionEvent.MINIGAME_BUTTONCLICKER)
-        {
-            this.uiController.EnableUse(b);
-        }
-        else if (this.currentEvent == InteractionEvent.MEETING_HALL)
-        {
-            this.uiController.EnableUse(b);
-        }
-        else if (this.currentEvent == InteractionEvent.MEETING_REPORTBODY)
-        {
-            this.uiController.EnableReport(b);
-        }
-        
-        //Switch statement does not work for some reason
-        // switch (this.currentEvent)
-        // {
-        //     case InteractionEvent.MINIGAME_BUTTONCLICKER:
-        //         console.log("Enabling Button Clicker Event");
-        //         this.uiController.EnableUse(b);
-        //         break;
-        //     case InteractionEvent.MEETING_HALL:
-        //         this.uiController.EnableUse(b);
-        //         break;
-        //     case InteractionEvent.MEETING_REPORTBODY:
-        //         this.uiController.EnableUse(b);
-        //         break;
-        //     default:
-        //         console.log("INteraction Failed: " + (this.currentEvent == InteractionEvent.MINIGAME_BUTTONCLICKER));
-        //         break;
-        // }
-    }
-    
-    public Use()
-    {
-        console.log("Used " + this.currentEvent);
-        if (this.currentEvent == InteractionEvent.MINIGAME_BUTTONCLICKER)
-        {
-            console.log("Playing Button Minigame");
-        }
-        else if (this.currentEvent == InteractionEvent.MEETING_HALL)
-        {
-            console.log("Calling Hall Meeting");
-            Main.instance.uiMgr.ShowVotingWin();
-        }
-    }
-    
     public Kill()
     {
         console.log(`Killed ${this.currentTarget}`);
         Main.instance.gameMgr.KillPlayer(this.GetNearestTarget());
-    }
-    
-    public Sabotage()
-    {
-        console.log("Sabotaged");
-    }
-    
-    public Report()
-    {
-        console.log("Reported");
-        Main.instance.client.SendMessageCallMeeting();
     }
 }

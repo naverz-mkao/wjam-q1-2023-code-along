@@ -4,6 +4,7 @@ import { Room } from 'ZEPETO.Multiplay';
 import { Player, State } from 'ZEPETO.Multiplay.Schema';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { WorldService, ZepetoWorldMultiplay } from 'ZEPETO.World';
+import CharacterController from '../../Character/CharacterController';
 import Main from '../../Main';
 import ClientMessageSender from './ClientMessageSender';
 
@@ -79,7 +80,7 @@ type MultiplayMessageGameFinish = {
 
 
 type MultiplayMessageResult = {
-
+    winningTeam : number
 }
 
 type MultiplayMessageClientReady = {
@@ -92,7 +93,7 @@ type MultiplayMessageCallMeeting = {
 
 
 
-enum GameState {
+export enum GameState {
 
     //Waiting for enough users to begin the game
     Wait,
@@ -163,39 +164,57 @@ export default class ClientScript extends ZepetoScriptBehaviour {
     public InitializeMessages()
     {
         this.multiplayRoom.AddMessageHandler(MultiplayMessageType.Waiting, (message: MultiplayMessageWaiting) => {
-            console.log("Waiting..");
             this.minClients = message.minClients;
             this.gameState = GameState.Wait;
+            Main.instance.uiMgr.SetUIState(this.gameState);
+            
+            console.error("Waiting..");
             Main.instance.uiMgr.UpdateUIConsole(`Waiting For ${this.multiplayPlayers.size}/${this.minClients} Clients to connect`);
         });
 
         this.multiplayRoom.AddMessageHandler(MultiplayMessageType.GameReady, (message: MultiplayMessageGameReady) => {
+            this.gameState = GameState.GameReady;
+            Main.instance.uiMgr.SetUIState(this.gameState);
+            
             console.log(`Initialized Game with virus ${message.virusId}`);
             Main.instance.uiMgr.UpdateUIConsole("Game is Ready. Assigning the Virus");
             console.error("Recieved Game Ready Message");
             Main.instance.InitializeWithVirus(message.virusId);
-            this.gameState = GameState.GameReady;
+            
         });
 
         this.multiplayRoom.AddMessageHandler(MultiplayMessageType.GameStart, (message => {
             this.gameState = GameState.GameStart;
+            Main.instance.uiMgr.SetUIState(this.gameState);
         }));
 
         this.multiplayRoom.AddMessageHandler(MultiplayMessageType.GameFinish, (message => {
             this.gameState = GameState.GameFinish;
+            Main.instance.uiMgr.SetUIState(this.gameState);
+            Main.instance.uiMgr.UpdateUIConsole("Game Finished! Analyzing Systems for failure...");
+            
         }));
 
-        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.Result, (message => {
+        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.Result, (message: MultiplayMessageResult) => {
             this.gameState = GameState.Result;
-        }));
+            Main.instance.uiMgr.SetUIState(this.gameState);
+            let cc : CharacterController = Main.instance.gameMgr.GetPlayerCC(WorldService.userId);
 
-        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.CallMeeting, (message => {
-            Main.instance.uiMgr.ShowVotingWin();
-        }));
-
-        this.multiplayRoom.AddMessageHandler(MultiplayMessageType.MeetingFinished, (message => {
-            Main.instance.uiMgr.HideVotingWin();
-        }));
+            if (cc.IsVirus())
+            {
+                if (message.winningTeam == 0)
+                    Main.instance.uiMgr.UpdateUIConsole("Well done. We've taken down the system.");
+                if (message.winningTeam == 1)
+                    Main.instance.uiMgr.UpdateUIConsole("You've failed me.. time to find a new host..");
+            }
+            else
+            {
+                if (message.winningTeam == 0)
+                    Main.instance.uiMgr.UpdateUIConsole("oh no!! Our systems our down!!");
+                if (message.winningTeam == 1)
+                    Main.instance.uiMgr.UpdateUIConsole("Great job!! We've prevented the virus from causing harm!");
+            }
+        });
     }
 
     public Init()
@@ -220,7 +239,7 @@ export default class ClientScript extends ZepetoScriptBehaviour {
             state.players.ForEach((userId, player) => { this.OnPlayerAdd(player, userId) });
 
             // Register Player Add/Remove events 
-            state.players.add_OnAdd((player, userId) => { this.OnPlayerAdd(player, userId) });
+            state.players.add_OnAdd((player, userId) => { this.OnPlayerAdd(player, userId) });  
             state.players.add_OnRemove((player, userId) => { this.OnPlayerRemove(player, userId) });
             state.gameTimer.add_OnChange(() => { Main.instance.uiMgr.UpdateMeetingTimer(state.gameTimer.value)});
 
