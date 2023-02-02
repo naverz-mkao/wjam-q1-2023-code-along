@@ -1316,7 +1316,7 @@ Transform:
   m_GameObject: {fileID: 465109728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -50, z: 0}
-  m_LocalScale: {x: 75, y: 50, z: 75}
+  m_LocalScale: {x: 100, y: 50, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1334,9 +1334,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - spawnPoint
+    unityValues:
+    - {fileID: 1503436609}
+    values:
+    - 
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 05e20d4e8f78a334e9ad87e290ad4656, type: 3}
@@ -3343,6 +3346,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.data[3]
+      value: value
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.data[3]
+      value: '{"type":"System.Single, mscorlib","value":"0"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.unityValues.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5d83bd74da63c41904183240632c98, type: 3}
 --- !u!4 &1124199825 stripped
@@ -3461,6 +3484,26 @@ PrefabInstance:
     - target: {fileID: 1221138225918946938, guid: fd5d83bd74da63c41904183240632c98, type: 3}
       propertyPath: m_Name
       value: Coin (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.data[3]
+      value: value
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.data[3]
+      value: '{"type":"System.Single, mscorlib","value":"1"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.unityValues.Array.size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5d83bd74da63c41904183240632c98, type: 3}
@@ -3849,6 +3892,30 @@ PrefabInstance:
     - target: {fileID: 1221138225918946938, guid: fd5d83bd74da63c41904183240632c98, type: 3}
       propertyPath: m_Name
       value: Coin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.data[3]
+      value: value
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.data[2]
+      value: '{"type":"System.Single, mscorlib","value":"200"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.data[3]
+      value: '{"type":"System.Single, mscorlib","value":"1"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.unityValues.Array.size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5d83bd74da63c41904183240632c98, type: 3}
@@ -4577,6 +4644,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1221138225918946919, guid: fd5d83bd74da63c41904183240632c98, type: 3}
   m_PrefabInstance: {fileID: 1756899492}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1503436608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503436609}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1503436609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503436608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.38, y: 1.05, z: -9.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1509912783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1221138225918946919, guid: fd5d83bd74da63c41904183240632c98, type: 3}
@@ -5125,7 +5222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script:
     keys:
-    - CollectCoinAudio
+    - collectCoinAudio
     unityValues:
     - {fileID: 1799091118}
     values:
@@ -5146,7 +5243,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4e4b7b3c86d934a41ab789ba6ff425da, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5854,9 +5951,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946936, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1221138225918946938, guid: fd5d83bd74da63c41904183240632c98, type: 3}
       propertyPath: m_Name
       value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.keys.Array.data[3]
+      value: value
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.values.Array.data[3]
+      value: '{"type":"System.Single, mscorlib","value":"10"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221138225918946939, guid: fd5d83bd74da63c41904183240632c98, type: 3}
+      propertyPath: script.unityValues.Array.size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5d83bd74da63c41904183240632c98, type: 3}

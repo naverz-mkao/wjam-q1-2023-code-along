@@ -42,8 +42,7 @@ export default class GameManager extends ZepetoScriptBehaviour {
         Main.instance.uiMgr.UpdateUIConsole(`Game is Ready to Begin. Waiting for players to load ${this.spawnCount}/${clientCount}`);
         while (this.spawnCount < clientCount) { yield; }
         this.isLoadingPlayers = false;
-
-        
+        Main.instance.uiMgr.UpdateUIConsole(`Game Started!`)
     }
 
     public GetSpawnTransform(spawnIndex: number): Transform

@@ -169,24 +169,24 @@ export default class ClientScript extends ZepetoScriptBehaviour {
         // Cache the player to our map 
         this.multiplayPlayers.set(userId, player);
 
-        //Create spawn info for our new character. 
-        const spawnInfo = new SpawnInfo();
-        const transformInfo : Transform = Main.instance.GetSpawnTransform(player.spawnIndex);
-        console.log(transformInfo.gameObject.name);
-        spawnInfo.position = transformInfo.position;
-        spawnInfo.rotation = transformInfo.rotation;
 
         // If the added player id matches the world service id, we know this is the local player. 
         const isLocal = WorldService.userId === userId;
-        
+
         if (this.gameState == GameState.Wait)
         {
             Main.instance.uiMgr.UpdateUIConsole(`Waiting For ${this.multiplayPlayers.size}/${this.minClients} Clients to connect`);
         }
-        
-        // Instantiate character with the above settings. 
-        ZepetoPlayers.instance.CreatePlayerWithUserId(userId, userId, spawnInfo, isLocal);
-        //ZepetoPlayers.instance.GetPlayer(userId.toString());
+
+        //Create spawn info for our new character. 
+        const spawnInfo = new SpawnInfo();
+        const transformInfo : Transform = Main.instance.GetSpawnTransform(player.spawnIndex);
+
+        // Challenge 3!
+        // Instructions: Using the SpawnInfo variable and the transformInfo variable created for you, assign the spawnInfo variable's 
+        // position and rotation variables to the transformInfo's transform/rotation values, then create a player using that info. 
+        // Hint: What type is transformInfo and what values do we want from that variable? Whats contained in our spawnInfo variable?
+        //       Where can we find the guide to create a player using the userId?
     }
 
     
@@ -303,15 +303,15 @@ export default class ClientScript extends ZepetoScriptBehaviour {
         //Cache the local transform position. 
         const position = transform.localPosition;
 
-        // Create the message body 
-        const message: MultiplayMessageCharacterTransform = {
-            positionX: position.x,
-            positionY: position.y,
-            positionZ: position.z
-        }
-
-        // Send the message to the server. 
-        this.multiplayRoom.Send(MultiplayMessageType.CharacterTransform, message);
+        // Challenge 1!
+        // Instructions: Create the message to send the transform message up to the server. 
+        // Hint: Can we use the MultiplayMessageCharacterTransform type? 
+        //       Where in the guides can we find how to send a message to the server?
+        
+        // Create the message body below.
+        
+        // Then, send the message to the server with the "Send" function. 
+        
     }
 
     public SendMessageClientReady()

@@ -19,19 +19,23 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst SoundManager_1 = require(\"./SoundManager\");\r\nclass
     CollectScript extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
     {\r\n    }\r\n    OnTriggerEnter(other) {\r\n        //CODE: Use Debug.Log to
     log \"Collect Coin\" to the console when another game object with a collider
-    enters the trigger that is on this game object\r\n        //CODE: Call the PlayCoinCollectSoundInSoundManager
-    function that''s in this CollectScript class\r\n        //CODE: Call the Destroy
-    function inside the GameObject class to destroy the coin game object that this
-    CollectScript is attached to\r\n    }\r\n    PlayCoinCollectSoundInSoundManager()
-    {\r\n        //CODE: Find game object named SoundManager using GameObject.Find,\r\n       
-    //      then get the SoundManager component that is on the SoundManager game
-    object,\r\n        //      and lastly call the PlayCoinCollectSound function
-    that exist in the SoundManager class\r\n    }\r\n}\r\nexports.default = CollectScript;\r\n//====================ANSWERS====================\r\n//Debug.Log(\"Collect
+    enters the trigger that is on this game object\r\n        console.log(\"Collided\");\r\n       
+    //CODE: Call the PlayCoinCollectSoundInSoundManager function that''s in this
+    CollectScript class\r\n        this.PlayCoinCollectSoundInSoundManager();\r\n       
+    //CODE: Call the Destroy function inside the GameObject class to destroy the
+    coin game object that this CollectScript is attached t\r\n        UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n   
+    }\r\n    PlayCoinCollectSoundInSoundManager() {\r\n        //CODE: Find game
+    object named SoundManager using GameObject.Find,\r\n        //      then get
+    the SoundManager component that is on the SoundManager game object,\r\n       
+    //      and lastly call the PlayCoinCollectSound function that exist in the SoundManager
+    class\r\n        UnityEngine_1.GameObject.Find(\"SoundManager\").GetComponent($typeof(SoundManager_1.default)).PlayCoinCollectSound();\r\n   
+    }\r\n}\r\nexports.default = CollectScript;\r\n//====================ANSWERS====================\r\n//Debug.Log(\"Collect
     Coin\");\r\n//this.PlayCoinCollectSoundInSoundManager();\r\n//GameObject.Destroy(this.gameObject);\r\n//GameObject.Find(\"SoundManager\").GetComponent<SoundManager>().PlayCoinCollectSound();\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29sbGVjdFNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNvbGxlY3RTY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFHckQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUU1RCxLQUFLO0lBRUwsQ0FBQztJQUVELGNBQWMsQ0FBQyxLQUFlO1FBQzFCLGtKQUFrSjtRQUVsSiwrRkFBK0Y7UUFFL0Ysb0lBQW9JO0lBQ3hJLENBQUM7SUFFRCxrQ0FBa0M7UUFDOUIsa0VBQWtFO1FBQ2xFLG9GQUFvRjtRQUNwRiw4RkFBOEY7SUFDbEcsQ0FBQztDQUVKO0FBcEJELGdDQW9CQztBQTJFRCxpREFBaUQ7QUFDakQsNEJBQTRCO0FBQzVCLDRDQUE0QztBQUM1QyxzQ0FBc0M7QUFDdEMsc0ZBQXNGIn0=","assetPath":"Assets/Scripts/CollectScript.ts","manifest":{"properties":[],"name":"CollectScript","description":""},"isCompiled":true}'
-  typescriptHash: 74be25ea45d7fe3e982be048812003e0
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29sbGVjdFNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNvbGxlY3RTY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBZ0Y7QUFDaEYsaURBQXFEO0FBQ3JELGlEQUEwQztBQUUxQyxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBRTVELEtBQUs7SUFFTCxDQUFDO0lBRUQsY0FBYyxDQUFDLEtBQWU7UUFDMUIsa0pBQWtKO1FBQ2xKLE9BQU8sQ0FBQyxHQUFHLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDeEIsK0ZBQStGO1FBQy9GLElBQUksQ0FBQyxrQ0FBa0MsRUFBRSxDQUFDO1FBQzFDLG1JQUFtSTtRQUNuSSx3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUM7SUFDeEMsQ0FBQztJQUVELGtDQUFrQztRQUM5QixrRUFBa0U7UUFDbEUsb0ZBQW9GO1FBQ3BGLDhGQUE4RjtRQUM5Rix3QkFBVSxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQyxZQUFZLFNBQUMsc0JBQVksR0FBSSxvQkFBb0IsRUFBRSxDQUFDO0lBQ3hGLENBQUM7Q0FFSjtBQXRCRCxnQ0FzQkM7QUEyRUQsaURBQWlEO0FBQ2pELDRCQUE0QjtBQUM1Qiw0Q0FBNEM7QUFDNUMsc0NBQXNDO0FBQ3RDLHNGQUFzRiJ9","assetPath":"Assets/Scripts/CollectScript.ts","manifest":{"properties":[],"name":"CollectScript","description":""},"isCompiled":true}'
+  typescriptHash: 2aed1fc189bb12f75bc5fe022949e1f8
   onlyWriteTrigger: 0

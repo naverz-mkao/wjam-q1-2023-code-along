@@ -2,15 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53453001-78c7-4d2f-8fc6-117a21bc3a10" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../session-01/Assets/Scripts/CollectScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-01/Assets/Scripts/CollectScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-01/Assets/Scripts/SpinScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-01/Assets/Scripts/SpinScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-01/Assets/Scripts/TeleportScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-01/Assets/Scripts/TeleportScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Session-02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Session-02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01_Art/Prefabs/UIController_Touchpad_Horizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Art/Prefabs/UIController_Touchpad_Horizontal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Character/CharacterController.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Character/CharacterController.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/05_Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/05_Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/World.multiplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/World.multiplay/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/WorldEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/WorldEditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/WorldPlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/WorldPlayerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-03/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Character/CharacterTriggerCheck.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Character/CharacterTriggerCheck.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/World.multiplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/World.multiplay/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/node_modules/@zepeto/sandbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/node_modules/@zepeto/sandbox/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/node_modules/zepeto-script-compiler/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/node_modules/zepeto-script-compiler/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/01_Art/Prefabs/UICanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/01_Art/Prefabs/UICanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/Multiplay/ClientMessageSender.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/Multiplay/ClientMessageSender.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UICharacterController.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UICharacterController.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/05_Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/05_Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/ProjectSettings/WorldPlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/ProjectSettings/WorldPlayerSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,24 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\leehy\\Documents\\NaverZ\\ZEPETO\\Projects\\InternalProjects\\WorldJam\\WJam_Q1_2023_Codealong\\session-02\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\leehy\\Documents\\NaverZ\\ZEPETO\\Projects\\InternalProjects\\WorldJam\\WJam_Q1_2023_Codealong\\session-02\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\leehy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\leehy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\leehy\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\leehy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\leehy\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\leehy\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.Zepeto Multiplay Script">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Unity.exe" />
@@ -90,6 +111,8 @@
       <option name="presentableId" value="Default" />
       <updated>1674869600614</updated>
       <workItem from="1674869604074" duration="3066000" />
+      <workItem from="1675123711666" duration="1870000" />
+      <workItem from="1675126784741" duration="11234000" />
     </task>
     <servers />
   </component>

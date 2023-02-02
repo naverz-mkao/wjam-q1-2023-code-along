@@ -19,19 +19,23 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
-    SpinScript extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    //CODE: Declare
-    3 public variables named xSpeed, ySpeed, and zSpeed or type number whose values
-    can be set in the inspector\r\n    //      In the Inspector, set the values for
-    xSpeed, ySpeed, and zSpeed to some values\r\n    Start() {\r\n    }\r\n    Update()
-    {\r\n        //Code: Access the Transform component that exist on the game object
-    that this SpinScript is attached to\r\n        //      Call the Rotate function
-    that exist in the Transform class to rotate the game object\r\n        //     
-    Note that the Rotate function takes a Vector3 as its first parameter\r\n       
-    //      Pass in xSpeed, ySpeed, zSpeed variables to create your Vector3\r\n   
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass SpinScript extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.value
+    = 1;\r\n    }\r\n    Start() {\r\n    }\r\n    Update() {\r\n        //Code:
+    Access the Transform component that exist on the game object that this SpinScript
+    is attached to\r\n        //      Call the Rotate function that exist in the
+    Transform class to rotate the game object\r\n        //      Note that the Rotate
+    function takes a Vector3 as its first parameter\r\n        //      Pass in xSpeed,
+    ySpeed, zSpeed variables to create your Vector3\r\n        this.transform.Rotate(new
+    UnityEngine_1.Vector3(this.xSpeed, this.ySpeed, this.zSpeed * UnityEngine_1.Time.deltaTime));\r\n       
+    this.transform.position = UnityEngine_1.Vector3.op_Addition(this.transform.position,
+    UnityEngine_1.Vector3.op_Multiply((UnityEngine_1.Vector3.op_Addition(UnityEngine_1.Vector3.up,
+    (UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.right,
+    Math.sin(UnityEngine_1.Time.time * 5)), 5)))), UnityEngine_1.Time.deltaTime));\r\n   
     }\r\n}\r\nexports.default = SpinScript;\r\n//====================ANSWERS====================\r\n//public
     xSpeed:number;\r\n//public ySpeed:number;\r\n//public zSpeed:number;\r\n//this.transform.Rotate(new
     Vector3(this.xSpeed, this.ySpeed, this.zSpeed) * Time.deltaTime, Space.Self);\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BpblNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwaW5TY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQUV6RCwySEFBMkg7SUFDM0gsc0ZBQXNGO0lBRXRGLEtBQUs7SUFDTCxDQUFDO0lBRUQsTUFBTTtRQUNOLHdHQUF3RztRQUN4Ryw0RkFBNEY7UUFDNUYsNEVBQTRFO1FBQzVFLHVFQUF1RTtJQUN2RSxDQUFDO0NBQ0o7QUFkRCw2QkFjQztBQTZFRCxpREFBaUQ7QUFDakQsdUJBQXVCO0FBQ3ZCLHVCQUF1QjtBQUN2Qix1QkFBdUI7QUFDdkIseUdBQXlHIn0=","assetPath":"Assets/Scripts/SpinScript.ts","manifest":{"properties":[],"name":"SpinScript","description":""},"isCompiled":true}'
-  typescriptHash: a9b6ae5150647e6a04242d234e26a6e8
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BpblNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwaW5TY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBc0U7QUFDdEUsaURBQXFEO0FBRXJELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFBN0Q7O1FBUVcsVUFBSyxHQUFXLENBQUMsQ0FBQztJQVk3QixDQUFDO0lBWEcsS0FBSztJQUNMLENBQUM7SUFFRCxNQUFNO1FBQ04sd0dBQXdHO1FBQ3hHLDRGQUE0RjtRQUM1Riw0RUFBNEU7UUFDNUUsdUVBQXVFO1FBQ25FLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLElBQUkscUJBQU8sQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFDLElBQUksQ0FBQyxNQUFNLEVBQUMsSUFBSSxDQUFDLE1BQU0sR0FBRyxrQkFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUM7UUFDekYsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBckJXLHFCQUFPLENBd0dpeG9CLFdBQVksQ0FuRnQwb0IsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBckJXLHFCQUFPLENBd0dpanBCLFdBQVksQ0FuRjNrcEIsQ0FyQk8scUJBQU8sQ0F3R2l4b0IsV0FBWSxDQW5GMXlvQixxQkFBTyxDQUFDLEVBQUUsRUFBRyxDQXJCUCxxQkFBTyxDQXdHaWpwQixXQUFZLENBeEdwa3BCLHFCQUFPLENBd0dpanBCLFdBQVksQ0FuRjVqcEIscUJBQU8sQ0FBQyxLQUFLLEVBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQyxrQkFBSSxDQUFDLElBQUksR0FBRyxDQUFDLENBQUMsR0FBRyxDQUFDLEVBQUMsRUFBQyxFQUFHLGtCQUFJLENBQUMsU0FBUyxHQUFDO0lBQzdHLENBQUM7Q0FDSjtBQXBCRCw2QkFvQkM7QUE2RUQsaURBQWlEO0FBQ2pELHVCQUF1QjtBQUN2Qix1QkFBdUI7QUFDdkIsdUJBQXVCO0FBQ3ZCLHlHQUF5RyJ9","assetPath":"Assets/Scripts/SpinScript.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"xSpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"ySpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"zSpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"value","type":"System.Single","isArray":false,"initValue":["1"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpinScript","description":""},"isCompiled":true}'
+  typescriptHash: e5e8c87a1ae48fafbf0b16187f5e4ed3
   onlyWriteTrigger: 0

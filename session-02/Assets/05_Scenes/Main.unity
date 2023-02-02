@@ -11154,7 +11154,7 @@ MonoBehaviour:
     height: 1.2
     walkSpeed: 2
     runSpeed: 5
-    jumpPower: 0
+    jumpPower: 10
     layer:
       serializedVersion: 2
       m_Bits: 0
@@ -11188,9 +11188,9 @@ MonoBehaviour:
     runSpeed: 4
     jumpPower: 13
     animatorController: {fileID: 9100000, guid: d45416f714b4fe74d9ddc118caf5f7c9, type: 2}
-    useDoubleJump: 0
+    useDoubleJump: 1
     doubleJumpPower: 13
-    useLandingRoll: 0
+    useLandingRoll: 1
     landingRollSpeed: 4
     useMoveTurn: 0
     Gravity: 50

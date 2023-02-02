@@ -29,26 +29,18 @@ export default class UIManager extends ZepetoScriptBehaviour {
         if (state == GameState.Wait)
         {
             this.titleUI.SetActive(true);
-            this.messageText.gameObject.SetActive(true);
-            this.timerText.gameObject.SetActive(false);
         }
         else if (state == GameState.GameReady)
         {
             this.titleUI.SetActive(false);
-            this.messageText.gameObject.SetActive(true);
-            this.timerText.gameObject.SetActive(false);
         }
         else if (state == GameState.GameStart)
         {
             this.titleUI.SetActive(false);
-            this.messageText.gameObject.SetActive(false);
-            this.timerText.gameObject.SetActive(true);
         }
         else if (state == GameState.GameFinish)
         {
             this.titleUI.SetActive(false);
-            this.messageText.gameObject.SetActive(true);
-            this.timerText.gameObject.SetActive(false);
         }
     }
 

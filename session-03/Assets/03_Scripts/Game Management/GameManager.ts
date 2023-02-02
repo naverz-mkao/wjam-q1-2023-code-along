@@ -84,7 +84,6 @@ export default class GameManager extends ZepetoScriptBehaviour {
             else
                 cc.SetTeam(PlayerTeam.SURVIVOR);
         });
-        
     }
     
     public UpdateTeam(userId: string, teamId: number)

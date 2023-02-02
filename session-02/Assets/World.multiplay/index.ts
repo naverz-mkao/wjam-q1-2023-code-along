@@ -88,13 +88,11 @@ export default class extends Sandbox {
 
             // Grab the player based on userId
             const player = this.state.players.get(userId);
-            // Sync Position Data
-            const position = new Vector3Schema();
-            position.x = message.positionX;
-            position.y = message.positionY;
-            position.z = message.positionZ;
 
-            player.position = position;
+            // Challenge 2!
+            // Instructions: Assign the position received from the client and assign the transform to the player variable above.
+            // Hint: What values are contained within the message variable in the parameter to this function?
+            //       What type is the "player" variable above? Where does it come from and what variables are contained within its type?
         });
 
         // Character State (Jumping, running etc) sync message
@@ -130,6 +128,9 @@ export default class extends Sandbox {
         // Apply the schema userID value to the player object. 
         player.userId = userId;
 
+        //Get the next available spawn transform index
+        player.spawnIndex = this.GetOpenSpawnIndex(this.state.players.size);
+        
         // Apply the schema's position data to our copy
         player.position = new Vector3Schema();
 
@@ -138,8 +139,6 @@ export default class extends Sandbox {
         player.position.y = 0;
         player.position.z = 0;
         
-        //Get the next available spawn transform index
-        player.spawnIndex = this.GetOpenSpawnIndex(this.state.players.size);
         
         //Cache our player to the map. 
         this.state.players.set(userId, player);

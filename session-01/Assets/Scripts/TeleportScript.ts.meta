@@ -19,22 +19,25 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass TeleportScript extends
     ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n    }\r\n    OnTriggerEnter(other)
     {\r\n        //CODE: Use Debug.Log to log the name of game object that entered
     the trigger of the game object this TeleportScript is attached to\r\n       
-    //TIP:  This if block checks to see if game object that entered the trigger of
-    the game object this TeleportScript is attached to has a ZepetoCharacter component
-    attached to it\r\n        //      Only a ZEPETO character would have a ZepetoCharacter
-    component attached to it, so this would mean a ZEPETO character triggered the
-    trigger\r\n        if (other.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)))
-    {\r\n            //CODE: Get the ZepetoCharacter component through the Collider
-    name other that was pass into OnTriggerEnter\r\n            //      Call the
-    Teleport function that exist in the ZepetoCharacter class, and teleport to position
-    0 for x, 0 for y, and 0 for z\r\n        }\r\n    }\r\n}\r\nexports.default =
-    TeleportScript;\r\n//====================ANSWERS====================\r\n//Debug.Log(other.gameObject.name
+    console.log(\"Entered Trigger\");\r\n        //TIP:  This if block checks to
+    see if game object that entered the trigger of the game object this TeleportScript
+    is attached to has a ZepetoCharacter component attached to it\r\n        //     
+    Only a ZEPETO character would have a ZepetoCharacter component attached to it,
+    so this would mean a ZEPETO character triggered the trigger\r\n        let character
+    = other.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    if (character != undefined) {\r\n            //CODE: Get the ZepetoCharacter
+    component through the Collider name other that was pass into OnTriggerEnter\r\n           
+    //      Call the Teleport function that exist in the ZepetoCharacter class, and
+    teleport to position 0 for x, 0 for y, and 0 for z\r\n            character.Teleport(this.spawnPoint.position,
+    UnityEngine_1.Quaternion.identity);\r\n        }\r\n    }\r\n}\r\nexports.default
+    = TeleportScript;\r\n//====================ANSWERS====================\r\n//Debug.Log(other.gameObject.name
     + \" entered trigger\");\r\n//other.gameObject.GetComponent<ZepetoCharacter>().Teleport(new
-    Vector3(0,0,0), Quaternion.identity);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnRTY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydFNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLDZFQUE2RDtBQUM3RCxpREFBcUQ7QUFFckQsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQUU3RCxLQUFLO0lBRUwsQ0FBQztJQUVELGNBQWMsQ0FBQyxLQUFlO1FBQzFCLG1JQUFtSTtRQUVuSSxnTEFBZ0w7UUFDaEwsa0pBQWtKO1FBQ2xKLElBQUksS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsSUFDakQ7WUFDQSwyR0FBMkc7WUFDM0csa0lBQWtJO1NBQ2pJO0lBQ0wsQ0FBQztDQUVKO0FBbEJELGlDQWtCQztBQTJFRCxpREFBaUQ7QUFDakQsd0RBQXdEO0FBQ3hELHFHQUFxRyJ9","assetPath":"Assets/Scripts/TeleportScript.ts","manifest":{"properties":[],"name":"TeleportScript","description":""},"isCompiled":true}'
-  typescriptHash: ee38d9534d8621a3c578d572208c5e60
+    Vector3(0,0,0), Quaternion.identity);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnRTY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydFNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE2RTtBQUM3RSw2RUFBNkQ7QUFDN0QsaURBQXFEO0FBRXJELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFFN0QsS0FBSztJQUVMLENBQUM7SUFFRCxjQUFjLENBQUMsS0FBZTtRQUMxQixtSUFBbUk7UUFDbkksT0FBTyxDQUFDLEdBQUcsQ0FBQyxpQkFBaUIsQ0FBQyxDQUFDO1FBRS9CLGdMQUFnTDtRQUNoTCxrSkFBa0o7UUFDbEosSUFBSSxTQUFTLEdBQUcsS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1FBQ2pFLElBQUksU0FBUyxJQUFJLFNBQVMsRUFDMUI7WUFDQSwyR0FBMkc7WUFDM0csa0lBQWtJO1lBQzlILFNBQVMsQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLEVBQUUsd0JBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztTQUNyRTtJQUNMLENBQUM7Q0FFSjtBQXJCRCxpQ0FxQkM7QUEyRUQsaURBQWlEO0FBQ2pELHdEQUF3RDtBQUN4RCxxR0FBcUcifQ==","assetPath":"Assets/Scripts/TeleportScript.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"spawnPoint","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TeleportScript","description":""},"isCompiled":true}'
+  typescriptHash: c626f4d7f73aea0a6554bf240ab86f45
   onlyWriteTrigger: 0
