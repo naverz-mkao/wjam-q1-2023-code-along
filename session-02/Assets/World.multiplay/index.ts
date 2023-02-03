@@ -93,6 +93,12 @@ export default class extends Sandbox {
             // Instructions: Assign the position received from the client and assign the transform to the player variable above.
             // Hint: What values are contained within the message variable in the parameter to this function?
             //       What type is the "player" variable above? Where does it come from and what variables are contained within its type?
+            const position = new Vector3Schema();
+            position.x = message.positionX;
+            position.y = message.positionY;
+            position.z = message.positionZ;
+
+            player.position = position;
         });
 
         // Character State (Jumping, running etc) sync message

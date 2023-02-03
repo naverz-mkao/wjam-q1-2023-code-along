@@ -2,49 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="280c30a6-d596-40f2-841d-0f0b3a5f0038" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterLoader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterLoader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterLoader.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterLoader.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollectScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CollectScript.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollectScript.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CollectScript.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpinScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpinScript.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpinScript.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpinScript.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeleportScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeleportScript.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeleportScript.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeleportScript.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/01_Art/Prefabs/UIController_Touchpad_Horizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/01_Art/Prefabs/UIController_Touchpad_Horizontal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Character/CharacterController.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Character/CharacterController.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/GameManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/GameManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/GameManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/GameManager.ts.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/05_Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/05_Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-02/Assets/World.multiplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/World.multiplay/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/ProjectSettings/WorldEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/ProjectSettings/WorldEditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/ProjectSettings/WorldPlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/ProjectSettings/WorldPlayerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-03/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/01_Art/Prefabs/UICanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/01_Art/Prefabs/UICanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/GameManager.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/Multiplay/ClientMessageSender.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/Game Management/Multiplay/ClientMessageSender.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UICharacterController.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UICharacterController.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/03_Scripts/UI/UIManager.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/Assets/05_Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/05_Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/ProjectSettings/WorldPlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/ProjectSettings/WorldPlayerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-03/Assets/World.multiplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/World.multiplay/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +55,7 @@
       <workItem from="1674764863831" duration="1231000" />
       <workItem from="1674773458462" duration="21701000" />
       <workItem from="1674847208339" duration="5389000" />
-      <workItem from="1675218092136" duration="16824000" />
+      <workItem from="1675218092136" duration="26296000" />
     </task>
     <servers />
   </component>

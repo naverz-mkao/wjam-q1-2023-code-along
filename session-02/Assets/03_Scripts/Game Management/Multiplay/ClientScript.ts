@@ -187,6 +187,11 @@ export default class ClientScript extends ZepetoScriptBehaviour {
         // position and rotation variables to the transformInfo's transform/rotation values, then create a player using that info. 
         // Hint: What type is transformInfo and what values do we want from that variable? Whats contained in our spawnInfo variable?
         //       Where can we find the guide to create a player using the userId?
+        spawnInfo.position = transformInfo.position;
+        spawnInfo.rotation = transformInfo.rotation;
+
+        // Instantiate character with the above settings. 
+        ZepetoPlayers.instance.CreatePlayerWithUserId(userId, userId, spawnInfo, isLocal);
     }
 
     
@@ -311,6 +316,15 @@ export default class ClientScript extends ZepetoScriptBehaviour {
         // Create the message body below.
         
         // Then, send the message to the server with the "Send" function. 
+        // Create the message body 
+        const message: MultiplayMessageCharacterTransform = {
+            positionX: position.x,
+            positionY: position.y,
+            positionZ: position.z
+        }
+
+        // Send the message to the server. 
+        this.multiplayRoom.Send(MultiplayMessageType.CharacterTransform, message);
         
     }
 

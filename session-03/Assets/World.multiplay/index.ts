@@ -254,6 +254,8 @@ export default class extends Sandbox {
     {
         this.gameTime = 0;
         this.state.gameTimer.value = 0;
+        
+        
         //Send a message to the clients that the game is beginning. 
         this.SendMessageGameStart();
     }
