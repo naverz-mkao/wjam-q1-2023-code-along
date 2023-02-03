@@ -1224,12 +1224,15 @@ MonoBehaviour:
     - messageText
     - timerText
     - titleUI
+    - titleFX
     unityValues:
     - {fileID: 0}
     - {fileID: 62877872}
     - {fileID: 1528477582}
     - {fileID: 148485873}
+    - {fileID: 1933227847}
     values:
+    - 
     - 
     - 
     - 
@@ -17786,7 +17789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1933227851}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: TitleFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

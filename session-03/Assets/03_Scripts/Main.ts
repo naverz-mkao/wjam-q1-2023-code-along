@@ -89,6 +89,7 @@ export default class Main extends ZepetoScriptBehaviour {
     {
         if (this.gameMgr == undefined) { return; }
         console.log(`Setting Virus with id ${virusId}`);
+        this.gameMgr.RespawnPlayers(this.spawnedIds);
         this.StartCoroutine(this.gameMgr.InitializeWithVirus(virusId));
     }
 }

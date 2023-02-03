@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d8f23c6-1ae8-4c78-a29d-f8b16179ecf9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/.idea/.idea.Session-02/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/ProjectSettings/WorldEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/ProjectSettings/WorldEditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Session-03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Session-03/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Art/Prefabs/UICanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Art/Prefabs/UICanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session-01/.idea/.idea.session-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-01/.idea/.idea.session-01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Game Management/GameManager.ts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/UI/UICharacterController.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/UI/UICharacterController.ts.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/UI/UIManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/UI/UIManager.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/UI/UIManager.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/UI/UIManager.ts.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/05_Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/05_Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/WorldPlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/WorldPlayerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/World.multiplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/World.multiplay/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +90,7 @@
       <updated>1675019264646</updated>
       <workItem from="1675019267713" duration="9044000" />
       <workItem from="1675101989817" duration="2968000" />
+      <workItem from="1675384733331" duration="386000" />
     </task>
     <servers />
   </component>

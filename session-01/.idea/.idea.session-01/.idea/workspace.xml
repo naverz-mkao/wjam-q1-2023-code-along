@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="280c30a6-d596-40f2-841d-0f0b3a5f0038" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.session-01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/03_Scripts/Game Management/Multiplay/ClientScript.ts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-02/Assets/World.multiplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-02/Assets/World.multiplay/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.idea/.idea.Session-03/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../session-03/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/.vscode/launch.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../session-03/Assets/World.multiplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../session-03/Assets/World.multiplay/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +49,7 @@
       <workItem from="1674764863831" duration="1231000" />
       <workItem from="1674773458462" duration="21701000" />
       <workItem from="1674847208339" duration="5389000" />
-      <workItem from="1675218092136" duration="26296000" />
+      <workItem from="1675218092136" duration="27248000" />
     </task>
     <servers />
   </component>

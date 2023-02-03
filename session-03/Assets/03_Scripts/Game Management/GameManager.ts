@@ -24,9 +24,22 @@ export default class GameManager extends ZepetoScriptBehaviour {
 
     private bodies : Map<string, GameObject> = new Map<string, GameObject>();
     private isLoadingPlayers: boolean = false;
+    
+    private bodyParent: Transform;
     public Init()
     {
         this.StartCoroutine(this.WaitForPlayersToLoad());
+    }
+    
+    public RespawnPlayers(userIds: Array<string>)
+    {
+        //If players doesn't exist in map, respawn.
+        userIds.forEach((userId) =>{
+           if (!this.players.has(userId))
+           {
+               this.RespawnPlayer(userId);
+           }
+        });
     }
     
     public *WaitForPlayersToLoad()
@@ -84,6 +97,13 @@ export default class GameManager extends ZepetoScriptBehaviour {
             else
                 cc.SetTeam(PlayerTeam.SURVIVOR);
         });
+        
+        if (this.bodyParent != undefined)
+        {
+            GameObject.Destroy(this.bodyParent.gameObject);
+        }
+        
+        this.bodyParent = new GameObject("BodyParent").transform;
     }
     
     public UpdateTeam(userId: string, teamId: number)
@@ -106,6 +126,7 @@ export default class GameManager extends ZepetoScriptBehaviour {
         
         let body: GameObject = GameObject.Instantiate<GameObject>(this.bodyPrefab, cc.transform.position, Quaternion.identity);
         body.gameObject.name = cc.playerInfo.userId;
+        body.transform.SetParent(this.bodyParent, true);
     }
     
     //Despawn character without removing user from the world server.

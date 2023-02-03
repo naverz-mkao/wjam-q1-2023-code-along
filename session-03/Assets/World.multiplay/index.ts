@@ -190,6 +190,13 @@ export default class extends Sandbox {
         
         return virusCount > survivorCount ? 0 : 1;
     }
+    
+    ResetRoles()
+    {
+        this.state.players.forEach((value: Player, key: string) =>{
+            value.team.teamId = 3;
+        });
+    }
 
     //Get the next available spawn transform index.
     GetOpenSpawnIndex(fromIndex : number): number
@@ -246,6 +253,7 @@ export default class extends Sandbox {
     {
         // Elapsed Time since start
         this.gameTime = 0;
+        this.ResetRoles();
         // Send Waiting state message to clients
         this.SendMessageWaiting();
     }

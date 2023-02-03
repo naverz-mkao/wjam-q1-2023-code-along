@@ -11,7 +11,7 @@ export default class UIManager extends ZepetoScriptBehaviour {
     public timerText: TextMeshProUGUI;
     
     public titleUI: GameObject;
-    
+    public titleFX: GameObject;
     public Init()
     {
         
@@ -29,24 +29,28 @@ export default class UIManager extends ZepetoScriptBehaviour {
         if (state == GameState.Wait)
         {
             this.titleUI.SetActive(true);
+            this.titleFX.SetActive(true);
         }
         else if (state == GameState.GameReady)
         {
             this.titleUI.SetActive(false);
+            this.titleFX.SetActive(false);
         }
         else if (state == GameState.GameStart)
         {
             this.titleUI.SetActive(false);
+            this.titleFX.SetActive(false);
         }
         else if (state == GameState.GameFinish)
         {
             this.titleUI.SetActive(false);
+            this.titleFX.SetActive(false);
         }
     }
 
     UpdateMeetingTimer(timer: number)
     {
-        this.timerText.text = timer.toString();
+        this.timerText.text = Math.max(0,timer).toString();
     }
     
     public SetTeam(team: PlayerTeam)
